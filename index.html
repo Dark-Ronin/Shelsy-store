@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shelsy store</title>
+  <meta name="description" content="Aicam Store - Moda e acessórios estilosos em Moçambique. Confira nossos produtos com preços acessíveis e promoções especiais.">
+  <meta name="keywords" content="Aicam Store, moda, acessórios, Moçambique, promoções, produtos, joias, sapatos, bolsas, vestidos" />
+  <title>Aicam Store</title>
+  
+  <link href="style.css" rel="stylesheet" />
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -11,65 +15,14 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <style>
-    body {
-      background: #f8f9fa;
-    }
-
-    .navbar {
-      background-color: #f9eaea;
-      box-shadow: 0 0 15px #f9eaea;
-    }
-
-    #promo {
-      background-image: url(img/fundo3.jpg);
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-
-    #prod {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-
-    .card-promo {
-      background-color: #fff1ec;
-      border: 1px solid #ffede7;
-      box-shadow: 0 0 10px rgba(249, 202, 202);
-      transition: 0.5s ease-in-out;
-    }
-
-    .card-promo:hover {
-      border: 1px solid #ffb197;
-      box-shadow: 0 0 30px rgb(255, 148, 148);
-    }
-
-    .card-img-top {
-      height: 250px;
-      object-fit: cover;
-      cursor: pointer;
-    }
-
-    /* Carrossel sombra na legenda */
-    .carousel-caption {
-      background: rgba(0,0,0,0.5);
-      border-radius: 0.3rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    }
-
-    footer {
-      background-color: #f9eaea;
-      box-shadow: 0 0 15px #f9eaea;
-    }
-
-  </style>
+  <meta name="google-site-verification" content="YG9M_u5gy1rbMfSZk1nZ9bwOu8IV0nZYv5FNL2oWa2k" />
 </head>
 <body>
 
   <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light mb-4">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Shelsy Store</a>
+      <a class="navbar-brand fw-bold" href="#">Aicam Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -92,14 +45,14 @@
           <img src="img/joias/joia_2.jpeg" class="d-block w-100" alt="Novidade 1" style="height: 250px; object-fit: cover;">
           <div class="carousel-caption d-md-block">
             <h5>Temos Colares de Ouro e Prata</h5>
-            <p class="d-none d-md-block">A preços super acessiveis</P>
+            <p class="d-none d-md-block">A preços super acessiveis</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="img/sapatos/sapato_1.jpeg" class="d-block w-100" alt="Novidade 2" style="height: 250px; object-fit: cover;">
           <div class="carousel-caption  d-md-block">
             <h5>Promoção especial em Sapatos</h5>
-            <p class="d-none d-md-block">A preços super acessiveis</P>
+            <p class="d-none d-md-block">A preços super acessiveis</p>
           </div>
         </div>
         <div class="carousel-item">
@@ -165,9 +118,8 @@
   <!-- Footer -->
 <footer class="text-center text-muted py-4 mt-5">
   <div class="container">
-    <p class="mb-1">&copy; 2025 Shelsy store. Todos os direitos reservados.</p>
-    <small class="d-block">
-      Desenvolvido por <a href="https://nortondev.netlify.app" style="color: black; text-decoration: none;">Norton Rungo</a>.
+    <p class="mb-1">&copy; 2025 Aicam Store. Todos os direitos reservados.</p>
+    <small class="d-block">Desenvolvido por <a href="https://nortondev.netlify.app" style="color: black; text-decoration: none;">Norton Rungo</a>.
     </small>
   </div>
 </footer>
@@ -370,6 +322,30 @@
       montarPromocoes();
     };
   </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        ${produtos.map(p => `
+          {
+            "@type": "Product",
+            "name": "${p.nome}",
+            "image": "${p.imagem}",
+            "description": "${p.descricao}",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MZN",
+              "price": "${p.preco}",
+              "availability": "https://schema.org/InStock",
+              "url": "https://teusite.com/produto/${encodeURIComponent(p.nome.toLowerCase().replace(/\\s+/g, '-'))}"
+            }
+          }
+        `).join(",")}
+      ]
+    }
+  </script>
+
 
 </body>
 </html>

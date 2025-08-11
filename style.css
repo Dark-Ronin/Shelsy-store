@@ -1,0 +1,49 @@
+body {
+    background: #f8f9fa;
+}
+
+.navbar {
+    background-color: #f9eaea;
+    box-shadow: 0 0 15px #f9eaea;
+}
+
+#promo {
+    background-image: url(img/fundo3.jpg);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#prod {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card-promo {
+    background-color: #fff1ec;
+    border: 1px solid #ffede7;
+    box-shadow: 0 0 10px rgba(249, 202, 202);
+    transition: 0.5s ease-in-out;
+}
+
+.card-promo:hover {
+    border: 1px solid #ffb197;
+    box-shadow: 0 0 30px rgb(255, 148, 148);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Carrossel sombra na legenda */
+.carousel-caption {
+    background: rgba(0,0,0,0.5);
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    background-color: #f9eaea;
+    box-shadow: 0 0 15px #f9eaea;
+}
