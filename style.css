@@ -1,9 +1,13 @@
+:root{
+    --corTema: #ffa7a7;
+}
+
 body {
     background: #f8f9fa;
 }
 
 .navbar {
-    background-color: #f9eaea;
+    background-color: var(--corTema);
     box-shadow: 0 0 15px #f9eaea;
 }
 
@@ -44,6 +48,6 @@ body {
 }
 
 footer {
-    background-color: #f9eaea;
+    background-color: var(--corTema);
     box-shadow: 0 0 15px #f9eaea;
 }
