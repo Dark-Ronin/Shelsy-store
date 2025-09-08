@@ -1,7 +1,7 @@
 :root{
     --corTema: #ff6161;      /* Rosa moderno */
     --corPreta: #181818;     /* Preto elegante */
-    --corWhatsapp: #25D366;  /* Verde WhatsApp */
+    --corWhatsapp: #61FFFF;  /* Verde WhatsApp */
 }
 
 body {
@@ -31,6 +31,13 @@ body.light-mode footer {
     padding-top: 20px;
     padding-bottom: 20px;
     background-size: cover;
+}
+
+#summertime {
+    background-image: url(img/fundo1.jpg);
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #prod {
@@ -92,15 +99,17 @@ body.light-mode .card-promo {
 
 /* Títulos das seções */
 h2.mb-4,
-h2.mb-4.text-center.fw-bold {
+h2.mb-4.text-center.fw-bold,
+h3 {
     color: var(--corTema);
+    text-align: center;
 }
 
 /* Botões */
 .btn-success, .btn-success:focus, .btn-success:active {
     background-color: var(--corWhatsapp) !important;
     border-color: var(--corWhatsapp) !important;
-    color: #fff !important;
+    color: #0f4d2a !important;
     font-weight: bold;
 }
 
