@@ -1,17 +1,17 @@
 //Abaixo voce encotrara uma ENORME lista de produtos, BOA SORTE!
-const numeroWhatsapp = '258852205772';
+window.numeroWhatsapp = '258852205772';
 
           /*Promocoes*/
-const promocoes = [
+window.promocoes = [
   {
-    nome: "Oculos Escuros Estilizados, Dois Pares",
+    nome: "Óculos Escuros Estilizados, Dois Pares",
     descricao: "Taxa: 100MZN ",
     preco: 130,
     precoOriginal: 190,
     imagem: "img/misc/oculos_1.jpg"
   },
   {
-    nome: "Oculos Escuros",
+    nome: "Óculos Escuros",
     descricao: "Taxa: 100MZN ",
     preco: 170,
     precoOriginal: 250,
@@ -473,8 +473,6 @@ const produtos = [
     imagem: "img/vestidos/vestido_longo_19.jpg",
     termos: ["vestido", "longo", "feminino", "moda", "elegante"]
   },
-
-
 
 
   {
